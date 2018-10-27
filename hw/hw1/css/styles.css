@@ -1,0 +1,56 @@
+body {
+	background-color:black;
+	color:gray;
+}
+header, main, nav, footer {
+	text-align: center;
+	background-image: url("M84.jpg");
+}
+#content {
+	text-align: left;
+}
+nav a {	/* links within "nav" container */
+	padding:15px;
+	padding-bottom:4px;
+	font-size: 1.8em;
+	text-decoration: none;	/* removes underline */
+	color: white;			/* by default, links are blue */
+}
+nav a:hover {			/* pseudo class */
+	border-bottom: 2px purple solid;
+	font-size: 2em;
+	transition: 0.5s	/* transition effect */
+}
+#picture {
+	float:left;
+	text-align:left;
+	font-size: 1em;
+}
+footer {
+	clear:left;
+	color:brown;
+	font-size:12px;
+}
+.currentPage {
+	border-bottom: dotted purple;
+	font-weight: bold;
+}
+ul {
+	text-align: left;
+	padding-left: 200px;
+}
+.software {
+	color: yellow;
+}
+h1 {
+	font-family: 'Krub', sans-serif;
+	font-size: 4em;
+	border-bottom: 0px;
+	color: purple;
+}
+h3 {
+	color: orange;
+}
+a {
+	color: brown;
+}
