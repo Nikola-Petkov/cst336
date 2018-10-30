@@ -1,0 +1,25 @@
+[29-Oct-2018 04:10:52 UTC] PHP Parse error:  syntax error, unexpected '++' (T_INC), expecting ')' in /home/ubuntu/workspace/cst336/labs/777/index.php on line 18
+[29-Oct-2018 04:11:18 UTC] PHP Parse error:  syntax error, unexpected '"randomValue"' (T_CONSTANT_ENCAPSED_STRING), expecting variable (T_VARIABLE) or '$' in /home/ubuntu/workspace/cst336/labs/777/index.php on line 20
+[29-Oct-2018 04:19:05 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/cst336/labs/777/index.php on line 34
+[29-Oct-2018 04:22:38 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/cst336/labs/777/index.php on line 34
+[29-Oct-2018 04:23:18 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/cst336/labs/777/index.php on line 34
+[29-Oct-2018 04:30:53 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/cst336/labs/777/index.php on line 34
+[29-Oct-2018 04:30:55 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/cst336/labs/777/index.php on line 34
+[29-Oct-2018 04:34:24 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/cst336/labs/777/index.php on line 34
+[29-Oct-2018 04:34:35 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/cst336/labs/777/index.php on line 34
+[29-Oct-2018 04:42:12 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/cst336/labs/777/index.php on line 28
+[29-Oct-2018 22:31:36 UTC] PHP Fatal error:  Call to undefined function displaySymbol() in /home/ubuntu/workspace/cst336/labs/777/index.php on line 11
+[29-Oct-2018 22:31:36 UTC] PHP Stack trace:
+[29-Oct-2018 22:31:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/777/index.php:0
+[29-Oct-2018 22:32:10 UTC] PHP Fatal error:  Call to undefined function displaySymbol() in /home/ubuntu/workspace/cst336/labs/777/index.php on line 11
+[29-Oct-2018 22:32:10 UTC] PHP Stack trace:
+[29-Oct-2018 22:32:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/777/index.php:0
+[29-Oct-2018 22:42:56 UTC] PHP Fatal error:  Call to undefined function play() in /home/ubuntu/workspace/cst336/labs/777/index.php on line 9
+[29-Oct-2018 22:42:56 UTC] PHP Stack trace:
+[29-Oct-2018 22:42:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/777/index.php:0
+[29-Oct-2018 22:42:57 UTC] PHP Fatal error:  Call to undefined function play() in /home/ubuntu/workspace/cst336/labs/777/index.php on line 9
+[29-Oct-2018 22:42:57 UTC] PHP Stack trace:
+[29-Oct-2018 22:42:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/777/index.php:0
+[30-Oct-2018 01:55:00 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/cst336/labs/777/inc/functions.php on line 47
+[30-Oct-2018 01:55:00 UTC] PHP Stack trace:
+[30-Oct-2018 01:55:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/777/index.php:0
