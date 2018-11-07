@@ -1,9 +1,16 @@
 <?php
     $backgroundImage = "img/sea.jpg";
     // API call here
-    if (isset($_GET['keyword'])) {
+    if (isset($_GET['keyword']) && !empty($_GET['keyword']))
+    {
         include 'api/pixabayAPI.php';
         $imageURLs = getImageURLs($_GET['keyword'], $_GET['layout']);
+        $backgroundImage = $imageURLs[array_rand($imageURLs)];
+    }
+    else if (isset($_GET['category']) && !empty($_GET['category']))
+    {
+        include 'api/pixabayAPI.php';
+        $imageURLs = getImageURLs($_GET['category'], $_GET['layout']);
         $backgroundImage = $imageURLs[array_rand($imageURLs)];
     }
 ?>
@@ -63,12 +70,12 @@
     </div>
     
     <!-- Controls Here -->
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <a class="carousel-control-prev" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <a class="carousel-control-next" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
     </div>
@@ -94,6 +101,7 @@
     </form>
     <br/><br />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     </body>
 </html>
