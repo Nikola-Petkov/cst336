@@ -1,0 +1,65 @@
+input {
+    width: 100px;
+    height: 25px;
+    background-color: darkgray;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#title {
+    color: lightblue;
+    font-family: Verdana;
+    text-align: center;
+}
+
+#cosmoquiz {
+    width: 660px;
+    border-style: hidden;
+}
+
+fieldset {
+    width: 620px;
+}
+
+#cosmoquiz, fieldset {
+    position: relative;
+    background-color: #ad9d7e;
+    font-size: large;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+}
+
+label, legend {
+    font-size: larger;
+}
+
+body {
+    font-family: cursive;
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+
+#buttons {
+    text-align: center;
+}
+
+#output {
+    color: lightblue;
+    background-color: #001d4c;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+footer {
+    text-align: center;
+	clear: left;
+	color: lightblue;
+	font-size: 12px;
+}
