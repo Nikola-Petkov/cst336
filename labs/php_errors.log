@@ -1,6 +1,0 @@
-[14-Nov-2018 03:30:14 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/labs/lab5/index.php:65
-Stack trace:
-#0 /home/ubuntu/workspace/cst336/labs/lab5/index.php(65): PDOStatement->execute(NULL)
-#1 /home/ubuntu/workspace/cst336/labs/lab5/index.php(119): displaySearchResults()
-#2 {main}
-  thrown in /home/ubuntu/workspace/cst336/labs/lab5/index.php on line 65

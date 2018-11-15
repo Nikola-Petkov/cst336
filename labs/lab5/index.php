@@ -33,7 +33,7 @@ function displaySearchResults()
         $sql = "SELECT * FROM om_product WHERE 1";
         
         if (!empty($_GET['product'])) {
-            $sql .= " AND productName LIKE :productName";
+            $sql .= " AND productName LIKE :productName OR productDescription LIKE :productName";
             $namedParameters[":productName"] = "%" . $_GET['product'] . "%";
         }
         
@@ -59,18 +59,16 @@ function displaySearchResults()
                 $sql .= " ORDER BY productName";
             }
         }
-    }
-    
-    $stmt = $conn->prepare($sql);
-    $stmt->execute($namedParameters);
-    $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
-    foreach ($records as $record) {
+        $stmt = $conn->prepare($sql);
+        $stmt->execute($namedParameters);
+        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
-        echo "<a href=\"purchaseHistory.php?productId=".$record["productId"]. "\"> History </a>";
-        echo $record["productName"] . " " . $record["productDescription"] . " $" . $record["price"] . "<br /><br />";
+        foreach ($records as $record) {
+            echo "<a href=\"purchaseHistory.php?productId=".$record["productId"]. "\"> History </a>";
+            echo $record["productName"] . " " . $record["productDescription"] . " $" . $record["price"] . "<br /><br />";
+        }
     }
-    
 }
 
 ?>
@@ -110,9 +108,9 @@ function displaySearchResults()
             <input type="submit" value="Search" name="searchForm" />
             
         </form>
-            
+        
         <br />
-            
+        
         </div>
         
         <hr>

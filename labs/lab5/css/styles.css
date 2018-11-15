@@ -1,0 +1,27 @@
+h1 {
+    color: #DDDAC7;    /* Tan */
+    padding: 10px 10px;
+    background-color: #2B7E9F;    /* Teal */
+    text-align: center;
+}
+
+body {
+    background-color: #002A4E;    /* Bay Blue */
+    color: #DDDAC7;    /* Tan */
+}
+
+form {
+    background-color: #DDDAC7;    /* Tan */
+    text-align: center;
+    font-size: large;
+    color: #2B7E9F;    /* Teal */
+    font-style: oblique;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+a {
+    color: #2B7E9F;    /* Teal */
+    text-decoration: none;
+    font-weight: bold;
+}
