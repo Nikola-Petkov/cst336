@@ -1,7 +1,6 @@
-
 body{
 	margin: 20px;
-	background-color: silver;
+	background-color: gray;
 }
 
 h1{
@@ -11,15 +10,14 @@ h1{
 #wrapper{
 	width: 600px;
 	margin: 0 auto;
-	background-color: white;
-	padding: 20px;
+	background-color: beige;
 }
 
 #introScreen, #testScreen {
 	position: absolute;
-	width: 560px;
+	width: 600px;
 	height: 600px;
-	background-color: white;
+	background-color: beige;
 	padding: 20px;
 }
 
@@ -36,13 +34,14 @@ h1{
 	border: 1px black solid;
 	cursor: hand;
 	cursor: pointer;
-
+	
 	user-select: none;
 	-o-user-select:none;
 	-moz-user-select: none;
 	-khtml-user-select: none;
 	-webkit-user-select: none;
 }
+
 .button:hover{
 	background-color: gray;
 	color: white;
