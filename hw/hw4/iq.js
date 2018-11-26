@@ -20,7 +20,7 @@ answer3[0] = "8";
 answer4[0] = "12";
 graphic[0] = "blank.gif";
 used[0] = false;
-		
+
 question[1] = "There are 12 pens on the table, you took 3, how many do you have?";
 answer1[1] = "3";
 answer2[1] = "9";
@@ -92,14 +92,14 @@ answer3[9] = "6";
 answer4[9] = "8";
 graphic[9] = "blank.gif";
 used[9] = false;
-			
+
 function respond(selected){
-	if (selected.innerHTML == correctAnswer) numCorrect++;
+	if ($(selected).text() == correctAnswer) numCorrect++;  // if (selected.innerHTML == correctAnswer) numCorrect++;
 	newProblem();
 }
 
 function start() {
-    document.getElementById('introScreen').style.display = 'none';
+    $('#introScreen').hide();                               // document.getElementById('introScreen').style.display = 'none';
     clockTimer = window.setInterval(updateClock, 1000);
 }
 
@@ -109,12 +109,12 @@ function updateClock() {
 
 function newProblem() {
     if (currentProblem == 10) {
-        if (numCorrect > 6) testScreen.innerHTML = '<h1>You are a Genius</h1>';
-        else if (numCorrect > 4) testScreen.innerHTML = '<h1>Quite smart I would say</h1>';
-        else testScreen.innerHTML = '<h1>Are you awake today?</h1>';
+        if (numCorrect > 6) $(testScreen).html('<h1>You are a Genius!</h1>');           // testScreen.innerHTML = '<h1>You are a Genius</h1>';
+        else if (numCorrect > 4) $(testScreen).html('<h1>Quite Smart I Would Say.</h1>');
+        else $(testScreen).html('<h1>Are you awake today?</h1>');
         
-        testScreen.innerHTML += 'You got ' + numCorrect + ' correct!';
-        testScreen.innerHTML += '<br><br>You took ' + numSeconds + ' seconds.';
+        $(testScreen).append('You got ' + numCorrect + ' correct!');                    // testScreen.innerHTML += 'You got ' + numCorrect + ' correct!';
+        $(testScreen).append('<br><br>You took ' + numSeconds + ' seconds.');
         clearInterval(clockTimer);
     }
     else {
@@ -125,9 +125,10 @@ function newProblem() {
         do {
             rp = Math.floor(Math.random() * 10);    // 0 to 9
         } while (used[rp]);
+        used[rp] = true;    // Mark the question as used.
         
-        var q = document.getElementById('question');
-        q.innerHTML = currentProblem + '. ' + question[rp];
+        var q = $('#question');                             // var q = document.getElementById('question');
+        $(q).text(currentProblem + '. ' + question[rp]);    // q.innerHTML = currentProblem + '. ' + question[rp];
         
         document.getElementById('graphic').src = graphic[rp];
         
@@ -147,9 +148,9 @@ function newProblem() {
         
         r4 = 10 - (r1 + r2 + r3);
         
-        document.getElementById('answer' + r1).innerHTML = answer1[rp];
-        document.getElementById('answer' + r2).innerHTML = answer2[rp];
-        document.getElementById('answer' + r3).innerHTML = answer3[rp];
-        document.getElementById('answer' + r4).innerHTML = answer4[rp];
+        $('#answer' + r1).text(answer1[rp]);        // document.getElementById('answer' + r1).innerHTML = answer1[rp];
+        $('#answer' + r2).text(answer2[rp]);
+        $('#answer' + r3).text(answer3[rp]);
+        $('#answer' + r4).text(answer4[rp]);
     }
 }
